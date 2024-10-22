@@ -23,7 +23,7 @@ const Layout = () => {
 
   return (
     <>
-      <Header avatarUrl={""} authorId={""} name={""}/>
+      <Header />
       <Container>
         <div className="flex-2 order-2 sm:order-1 sm:p-4">
           <NavBar />
