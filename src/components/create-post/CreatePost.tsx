@@ -31,7 +31,7 @@ const CreatePost = () => {
     }
   })
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: { key: string; preventDefault: () => void }) => {
     if (event.key === 'Enter') {
       event.preventDefault()
       onSubmit()
