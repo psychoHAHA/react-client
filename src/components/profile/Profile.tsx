@@ -16,7 +16,7 @@ const Profile = () => {
   const { name, email, avatarUrl, id } = current
 
   return (
-    <Card className="py-4 w-[302px]">
+    <Card className="py-4 w-[302px] hidden sm:flex">
       <CardHeader className="pb-0 pt-2 flex-col items-center">
         <Image
           alt="Card-profile"

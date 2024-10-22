@@ -1,7 +1,6 @@
 import React from "react"
+
 import {
-  useCreatePostMutation,
-  useLazyGetAllPostsQuery,
   useLazyGetPostByIdQuery,
 } from "../../app/services/postsApi"
 import { Controller, useForm } from "react-hook-form"
@@ -29,13 +28,20 @@ const CreateComment = () => {
     try {
       if (id) {
         await createComment({ content: data.comment, postId: id }).unwrap()
-        setValue("post", "")
+        setValue("comment", "")
         await getPostById(id).unwrap()
       }
     } catch (error) {
       console.log(error)
     }
   })
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      onSubmit()
+    }
+  }
 
   return (
     <form className="flex-grow" onSubmit={onSubmit}>
@@ -52,6 +58,7 @@ const CreateComment = () => {
             labelPlacement="outside"
             placeholder="Напишите своей комментарий"
             className="mb-5"
+            onKeyDown={handleKeyDown}
           />
         )}
       />

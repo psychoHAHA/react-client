@@ -14,7 +14,7 @@ import { User } from "../../app/types"
 import Input from "../input/input"
 import { useUpdateUserMutation } from "../../app/services/userApi"
 import { useParams } from "react-router-dom"
-import { hasErrorField } from "../../utils/has-error-field"
+import { hasErrorField } from "../../pages/utils/has-error-field"
 import { ErrorMessage } from "../error-message/errorMessage"
 import { MdOutlineEmail } from "react-icons/md"
 

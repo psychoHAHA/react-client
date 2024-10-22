@@ -20,7 +20,7 @@ import {
 } from "react-icons/md"
 import { CiEdit } from "react-icons/ci"
 import ProfileInfo from "../../components/profile-info/ProfileInfo"
-import { formatToClientDate } from "../../utils/format-to-client-date"
+import { formatToClientDate } from "../utils/format-to-client-date"
 import CountInfo from "../../components/count-info/CountInfo"
 import { EditProfile } from "../../components/edit-profile/EditProfile"
 
@@ -75,14 +75,12 @@ const UserProfile = () => {
   return (
     <>
       <GoBack />
-      <div className="flex items-stretch gap-4">
+      <div className="flex flex-col sm:flex-row items-stretch gap-4">
         <Card className="flex flex-col items-center text-center space-y-4 p-5 flex-2">
           <Image
             src={`${BASE_URL}${data.avatarUrl}`}
             alt={data?.name}
-            width={200}
-            height={200}
-            className="border-4 border-whit w-full h-full object-cover"
+            className="border-4 border-whit w-full h-full object-cover h-200 w-200"
           />
           <div className="flex flex-col text-2x1 font-bold gap-4 items-center">
             {data.name}

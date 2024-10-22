@@ -24,12 +24,19 @@ const CreatePost = () => {
   const onSubmit = handleSubmit(async data => {
     try {
       await createPost({ content: data.post }).unwrap()
-      setValue("comment", "")
+      setValue("post", "")
       await triggerAllPosts().unwrap()
     } catch (error) {
       console.log(error)
     }
   })
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      onSubmit()
+    }
+  }
 
   return (
     <form className="flex-grow" onSubmit={onSubmit}>
@@ -46,6 +53,7 @@ const CreatePost = () => {
             labelPlacement="outside"
             placeholder="О чем думаете?"
             className="mb-5"
+            onKeyDown={handleKeyDown}
           />
         )}
       />

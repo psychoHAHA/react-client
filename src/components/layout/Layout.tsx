@@ -23,16 +23,16 @@ const Layout = () => {
 
   return (
     <>
-      <Header />
+      <Header avatarUrl={""} authorId={""} name={""}/>
       <Container>
-        <div className="flex-2 p-4">
+        <div className="flex-2 order-2 sm:order-1 sm:p-4">
           <NavBar />
         </div>
-        <div className="flex-1 p-4">
+        <div className="flex-1 order-3 sm:order-2 p-4">
           <Outlet />
         </div>
-        <div className="flex-2 p-4">
-          <div className="flex-col flex gap-5">{!user && <Profile />}</div>
+        <div className="flex-2 order-1 sm:order-3 sm:p-4">
+          <div className="flex-row flex gap-5">{!user && <Profile />}</div>
         </div>
       </Container>
     </>

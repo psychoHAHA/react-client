@@ -21,7 +21,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import { selectCurrent } from "../../features/user/userSlice"
 import User from "../user/User"
-import { formatToClientDate } from "../../utils/format-to-client-date"
+import { formatToClientDate } from "../../pages/utils/format-to-client-date"
 import { RiDeleteBinLine } from "react-icons/ri"
 import Typography from "../typography/Typography"
 import MetaInfo from "../mete-info/MetaInfo"
@@ -29,7 +29,7 @@ import { FcDislike } from "react-icons/fc"
 import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { FaRegComment } from "react-icons/fa"
 import { ErrorMessage } from "../error-message/errorMessage"
-import { hasErrorField } from "../../utils/has-error-field"
+import { hasErrorField } from "../../pages/utils/has-error-field"
 
 type Props = {
   avatarUrl: string

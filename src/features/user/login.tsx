@@ -5,7 +5,7 @@ import { Button, Link } from "@nextui-org/react"
 import { useLazyCurrentQuery, useLoginMutation } from "../../app/services/userApi"
 import { useNavigate } from "react-router-dom"
 import { ErrorMessage } from "../../components/error-message/errorMessage"
-import { hasErrorField } from "../../utils/has-error-field"
+import { hasErrorField } from "../../pages/utils/has-error-field"
 
 type Props = {
   setSelected: (value: string) => void
