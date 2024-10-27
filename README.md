@@ -1,3 +1,18 @@
+Что использовалось:
+🛠️ React
+💾 Typescript
+⭐️Node.js Express
+🎨 Rexux Toolkit
+↩️ RTK Query
+⌨️ React Hook Form
+🤝 Docker
+🧰 Docker Compose
+🔐 База данных из Docker
+🌐 React 18
+💅 Next UI
+
+ссылка на сайт: http://158.160.67.208/
+
 # vite-template-redux
 
 Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
